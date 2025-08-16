@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferit Tahir - Premium Web Tasarım Portföyü</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Genel Stil */
+  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+  body { background:#f0f2f5; color:#333; scroll-behavior:smooth; overflow-x:hidden; }
+  a { text-decoration:none; color: inherit; }
+  section { padding:100px 20px; position:relative; }
+  h1,h2,h3 { margin-bottom:20px; }
+  h1 { font-size:3em; }
+  h2 { font-size:2em; color:#222; }
+  h3 { font-size:1.2em; color:#555; }
+
+  /* Header */
+  header { 
+    position:relative; 
+    height:100vh; 
+    background:linear-gradient(135deg, #0f2027, #2c5364); 
+    color:#fff; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center; 
+    align-items:center; 
+    text-align:center; 
+    overflow:hidden;
+  }
+  header h1 { font-size:3.5em; margin-bottom:15px; z-index:2; }
+  header p { font-size:1.3em; margin-bottom:30px; z-index:2; }
+  header::after { 
+    content:''; position:absolute; top:0; left:0; width:100%; height:100%; 
+    background:url('https://images.unsplash.com/photo-1598300050730-fffc3c86ef8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600') center/cover no-repeat; 
+    opacity:0.25; z-index:1; transform:translateZ(0); 
+  }
+
+  /* Sosyal ve iletişim butonları */
+  .contact-buttons { z-index:2; display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+  .contact-buttons a { 
+    display:inline-block; 
+    padding:15px 30px; 
+    background:#fff; 
+    color:#0f2027; 
+    font-weight:600; 
+    border-radius:50px; 
+    box-shadow:0 5px 15px rgba(0,0,0,0.2); 
+    transition:0.3s; 
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-buttons a:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.3); }
+  .contact-buttons a::after {
+    content:''; position:absolute; top:0; left:-75%; width:50%; height:100%; background:rgba(255,255,255,0.3); transform:skewX(-25deg); transition:0.5s;
+  }
+  .contact-buttons a:hover::after { left:150%; }
+
+  /* Bölüm Animasyonları */
+  .fade-in { opacity:0; transform:translateY(50px); transition:1s ease-out; }
+  .fade-in.show { opacity:1; transform:translateY(0); }
+
+  /* Referanslar */
+  .references { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:50px; }
+  .ref-card { background:#fff; padding:30px; border-radius:20px; width:300px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:0.3s; position:relative; overflow:hidden; }
+  .ref-card:hover { transform:translateY(-10px); box-shadow:0 15px 30px rgba(0,0,0,0.2); }
+  .ref-card h3 { margin-bottom:10px; color:#0f2027; }
+  .ref-card a { display:inline-block; margin-top:10px; font-weight:600; color:#0f2027; transition:0.3s; }
+  .ref-card a:hover { text-decoration:underline; }
+
+  /* Footer */
+  footer { background:#222; color:#fff; text-align:center; padding:50px 20px; }
+  footer a { color:#2c5364; font-weight:600; transition:0.3s; }
+  footer a:hover { text-decoration:underline; }
+
+  /* Animasyonlu SVG */
+  .animated-bg { position:absolute; width:200%; height:200%; top:-50%; left:-50%; z-index:0; pointer-events:none; }
+  .animated-circle { fill:none; stroke:#fff; stroke-width:2; stroke-opacity:0.05; animation:rotate 60s linear infinite; }
+  @keyframes rotate { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>Ferit Tahir</h1>
+  <p>Web sitesi kurulumu ve tasarımı</p>
+  <div class="contact-buttons">
+    <a href="https://wa.me/905472132323" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://instagram.com/feroprophet" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+  </div>
+
+  <!-- Animasyonlu SVG -->
+  <svg class="animated-bg">
+    <circle class="animated-circle" cx="50%" cy="50%" r="200"></circle>
+    <circle class="animated-circle" cx="50%" cy="50%" r="300"></circle>
+    <circle class="animated-circle" cx="50%" cy="50%" r="400"></circle>
+  </svg>
+</header>
+
+<!-- Web Sitesi Kurulumu -->
+<section class="fade-in" style="text-align:center;">
+  <h2>Web Sitesi Kurulumu</h2>
+  <p>Restoran siteleri, portföy siteleri, tanıtım ve kişisel siteler dahil olmak üzere profesyonel web siteleri kurulumu için iletişime geçebilirsiniz. Uygun fiyat ve 7/24 destek ile her zaman hizmetinizdeyiz.</p>
+</section>
+
+<!-- Referanslar -->
+<section class="fade-in">
+  <h2 style="text-align:center;">Referanslarımız</h2>
+  <div class="references">
+    <div class="ref-card">
+      <h3>Çıtır Pide</h3>
+      <p>Lezzetli pide ve lahmacun menüsü</p>
+      <a href="https://citirpide.github.io/" target="_blank">Siteyi Gör</a>
+    </div>
+    <div class="ref-card">
+      <h3>Dede Pide</h3>
+      <p>Modern ve sade restoran sitesi</p>
+      <a href="https://dedepide.github.io/" target="_blank">Siteyi Gör</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>İletişim: <a href="https://wa.me/905472132323" target="_blank">0547 213 23 23</a> | Instagram: <a href="https://instagram.com/feroprophet" target="_blank">@feroprophet</a></p>
+  <p>&copy; 2025 Ferit Tahir - Tüm Hakları Saklıdır.</p>
+</footer>
+
+<script>
+  // Scroll animasyonu
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold:0.3, rootMargin:"0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => { appearOnScroll.observe(fader); });
+</script>
+
+</body>
+</html>
